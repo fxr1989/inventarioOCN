@@ -12,7 +12,6 @@ namespace DataBaseContext.ConfiguracionDB
     {
         public ProductoConfig()
         {
-            ToTable("Productos");
             HasKey(producto => producto.ProductoID);
             HasIndex(producto => producto.Codigo).IsUnique(true);
             Property(producto => producto.Codigo)

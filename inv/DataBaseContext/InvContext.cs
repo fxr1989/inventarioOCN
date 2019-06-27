@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Modelo;
 using DataBaseContext.ConfiguracionDB;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace DataBaseContext
 {
@@ -20,13 +21,23 @@ namespace DataBaseContext
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Producto> Productos { get; set; }
+        public DbSet<Ubicacion> Ubicaciones { get; set; }
+        public DbSet<Entrada> Entradas { get; set; }
+        public DbSet<EntradaLinea> EntradaLineas { get; set; }
+        public DbSet<Inventario> Inventarios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            
             modelBuilder.Configurations.Add(new AreaConfig());
             modelBuilder.Configurations.Add(new UsuarioConfig());
             modelBuilder.Configurations.Add(new CategoriaConfig());
             modelBuilder.Configurations.Add(new ProductoConfig());
+            modelBuilder.Configurations.Add(new UbicacionConfig());
+            modelBuilder.Configurations.Add(new EntradaConfig());
+            modelBuilder.Configurations.Add(new EntradaLineaConfig());
+            modelBuilder.Configurations.Add(new InventarioConfig());
 
             base.OnModelCreating(modelBuilder);
         }

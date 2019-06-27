@@ -48,7 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\EntradaDto.cs" />
+    <Compile Include="Dto\EntradaLineaDto.cs" />
+    <Compile Include="EntradaRepositorio.cs" />
     <Compile Include="Interface\IRepositorio.cs" />
+    <Compile Include="InventarioRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio.cs" />
   </ItemGroup>
@@ -66,5 +70,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

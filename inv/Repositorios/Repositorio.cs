@@ -9,7 +9,7 @@ namespace Repositorios
 {
     public class Repositorio<T> : IRepositorio<T> where T : class
     {
-        protected InvContext db;
+        public InvContext db;
 
         public Repositorio()
         {

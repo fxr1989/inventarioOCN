@@ -50,7 +50,11 @@
   <ItemGroup>
     <Compile Include="ConfiguracionDB\AreaConfig.cs" />
     <Compile Include="ConfiguracionDB\CategoriaConfig.cs" />
+    <Compile Include="ConfiguracionDB\EntradaConfig.cs" />
+    <Compile Include="ConfiguracionDB\EntradaLineaConfig.cs" />
+    <Compile Include="ConfiguracionDB\InventarioConfig.cs" />
     <Compile Include="ConfiguracionDB\ProductoConfig.cs" />
+    <Compile Include="ConfiguracionDB\UbicacionConfig.cs" />
     <Compile Include="ConfiguracionDB\UsuarioConfig.cs" />
     <Compile Include="InvContext.cs" />
     <Compile Include="Migrations\201906200315078_InitInvFeliz.cs" />
@@ -68,6 +72,18 @@
     <Compile Include="Migrations\201906222040575_categoria_productos.cs" />
     <Compile Include="Migrations\201906222040575_categoria_productos.Designer.cs">
       <DependentUpon>201906222040575_categoria_productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906231652305_Modelo_Ubicacion.cs" />
+    <Compile Include="Migrations\201906231652305_Modelo_Ubicacion.Designer.cs">
+      <DependentUpon>201906231652305_Modelo_Ubicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906232001512_Entrada_modelo.cs" />
+    <Compile Include="Migrations\201906232001512_Entrada_modelo.Designer.cs">
+      <DependentUpon>201906232001512_Entrada_modelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906270157176_TableInventario.cs" />
+    <Compile Include="Migrations\201906270157176_TableInventario.Designer.cs">
+      <DependentUpon>201906270157176_TableInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +109,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906222040575_categoria_productos.resx">
       <DependentUpon>201906222040575_categoria_productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906231652305_Modelo_Ubicacion.resx">
+      <DependentUpon>201906231652305_Modelo_Ubicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906232001512_Entrada_modelo.resx">
+      <DependentUpon>201906232001512_Entrada_modelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906270157176_TableInventario.resx">
+      <DependentUpon>201906270157176_TableInventario.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

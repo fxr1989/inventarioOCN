@@ -25,5 +25,41 @@ namespace Presentacion
             frmCategoria.MdiParent = this;
             frmCategoria.Show();
         }
+
+        private void btnUbicacion_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmUbicacion frmUbicacion = new FrmUbicacion();
+            frmUbicacion.MdiParent = this;
+            frmUbicacion.Show();
+
+        }
+
+        private void btnProductos_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmProducto frmProducto = new FrmProducto();
+            frmProducto.MdiParent = this;
+            frmProducto.Show();
+        }
+
+        private void btnArea_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmArea frmArea = new FrmArea();
+            frmArea.MdiParent = this;
+            frmArea.Show();
+        }
+
+        private void btnUusarios_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmUsuario frmUsuario = new FrmUsuario();
+            frmUsuario.MdiParent = this;
+            frmUsuario.Show();
+        }
+
+        private void btnEntrada_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmEntrada frmEntrada = new FrmEntrada();
+            frmEntrada.MdiParent = this;
+            frmEntrada.Show();
+        }
     }
 }
