@@ -61,5 +61,19 @@ namespace Presentacion
             frmEntrada.MdiParent = this;
             frmEntrada.Show();
         }
+
+        private void btnSalida_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmSalida frmSalida = new FrmSalida();
+            frmSalida.MdiParent = this;
+            frmSalida.Show();
+        }
+
+        private void btnInventario_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmInventario frmInventario = new FrmInventario();
+            frmInventario.MdiParent = this;
+            frmInventario.Show();
+        }
     }
 }

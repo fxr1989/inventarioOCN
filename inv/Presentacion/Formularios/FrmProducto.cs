@@ -203,7 +203,7 @@ namespace Presentacion.Formularios
 
         private void BuscarCategoria()
         {
-            var buscar = new FrmBuscarCategoria<Categoria>("Buscar categoria", "CategoriaID", "Nombre");
+            var buscar = new FrmBuscar<Categoria>("Buscar categoria", "CategoriaID", "Nombre");
             if (buscar.ShowDialog() == DialogResult.OK)
             {
                 var categoria = buscar.resultado;

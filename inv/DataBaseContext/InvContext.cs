@@ -25,6 +25,8 @@ namespace DataBaseContext
         public DbSet<Entrada> Entradas { get; set; }
         public DbSet<EntradaLinea> EntradaLineas { get; set; }
         public DbSet<Inventario> Inventarios { get; set; }
+        public DbSet<Salida> Salidas { get; set; }
+        public DbSet<SalidaLinea> SalidasLineas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -38,6 +40,8 @@ namespace DataBaseContext
             modelBuilder.Configurations.Add(new EntradaConfig());
             modelBuilder.Configurations.Add(new EntradaLineaConfig());
             modelBuilder.Configurations.Add(new InventarioConfig());
+            modelBuilder.Configurations.Add(new SalidaConfig());
+            modelBuilder.Configurations.Add(new SalidaLineaConfig());
 
             base.OnModelCreating(modelBuilder);
         }

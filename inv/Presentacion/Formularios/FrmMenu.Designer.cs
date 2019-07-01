@@ -36,14 +36,20 @@
             this.btnProductos = new DevExpress.XtraBars.BarButtonItem();
             this.btnUusarios = new DevExpress.XtraBars.BarButtonItem();
             this.btnUbicacion = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEntrada = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSalida = new DevExpress.XtraBars.BarButtonItem();
+            this.btnInventario = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnEntrada = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +63,16 @@
             this.btnProductos,
             this.btnUusarios,
             this.btnUbicacion,
-            this.btnEntrada});
+            this.btnEntrada,
+            this.btnSalida,
+            this.btnInventario});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 7;
+            this.ribbon.MaxItemId = 9;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
-            this.ribbonPage1});
+            this.ribbonPage1,
+            this.ribbonPage3});
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowToolbarCustomizeItem = false;
             this.ribbon.Size = new System.Drawing.Size(1202, 144);
@@ -115,6 +124,60 @@
             this.btnUbicacion.Name = "btnUbicacion";
             this.btnUbicacion.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUbicacion_ItemClick);
             // 
+            // btnEntrada
+            // 
+            this.btnEntrada.Caption = "Nueva Entrada";
+            this.btnEntrada.Id = 6;
+            this.btnEntrada.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrada.ImageOptions.Image")));
+            this.btnEntrada.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEntrada.ImageOptions.LargeImage")));
+            this.btnEntrada.Name = "btnEntrada";
+            this.btnEntrada.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEntrada_ItemClick);
+            // 
+            // btnSalida
+            // 
+            this.btnSalida.Caption = "Nueva Salida";
+            this.btnSalida.Id = 7;
+            this.btnSalida.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSalida.ImageOptions.Image")));
+            this.btnSalida.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSalida.ImageOptions.LargeImage")));
+            this.btnSalida.Name = "btnSalida";
+            this.btnSalida.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSalida_ItemClick);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.Caption = "Inventario";
+            this.btnInventario.Id = 8;
+            this.btnInventario.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInventario.ImageOptions.Image")));
+            this.btnInventario.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnInventario.ImageOptions.LargeImage")));
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInventario_ItemClick);
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup5});
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "Movimiento de Inventario";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnEntrada);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Entrada";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnSalida);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Salida";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnInventario);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Movimientos";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -134,9 +197,8 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnArea);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnUusarios);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Usuarios";
+            this.ribbonPageGroup2.Text = "Acceso";
             // 
             // ribbonStatusBar
             // 
@@ -149,27 +211,18 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Black";
             // 
-            // ribbonPage2
+            // ribbonPage3
             // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Entradas";
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup6});
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "Sistema";
             // 
-            // ribbonPageGroup3
+            // ribbonPageGroup6
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnEntrada);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Entrada";
-            // 
-            // btnEntrada
-            // 
-            this.btnEntrada.Caption = "Nueva Entrada";
-            this.btnEntrada.Id = 6;
-            this.btnEntrada.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrada.ImageOptions.Image")));
-            this.btnEntrada.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEntrada.ImageOptions.LargeImage")));
-            this.btnEntrada.Name = "btnEntrada";
-            this.btnEntrada.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEntrada_ItemClick);
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnUusarios);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Usuarios";
             // 
             // FrmMenu
             // 
@@ -208,5 +261,11 @@
         private DevExpress.XtraBars.BarButtonItem btnEntrada;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem btnSalida;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.BarButtonItem btnInventario;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
     }
 }

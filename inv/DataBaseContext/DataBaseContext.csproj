@@ -54,6 +54,8 @@
     <Compile Include="ConfiguracionDB\EntradaLineaConfig.cs" />
     <Compile Include="ConfiguracionDB\InventarioConfig.cs" />
     <Compile Include="ConfiguracionDB\ProductoConfig.cs" />
+    <Compile Include="ConfiguracionDB\SalidaConfig.cs" />
+    <Compile Include="ConfiguracionDB\SalidaLineaConfig.cs" />
     <Compile Include="ConfiguracionDB\UbicacionConfig.cs" />
     <Compile Include="ConfiguracionDB\UsuarioConfig.cs" />
     <Compile Include="InvContext.cs" />
@@ -84,6 +86,14 @@
     <Compile Include="Migrations\201906270157176_TableInventario.cs" />
     <Compile Include="Migrations\201906270157176_TableInventario.Designer.cs">
       <DependentUpon>201906270157176_TableInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906280404151_Tabla_Salida.cs" />
+    <Compile Include="Migrations\201906280404151_Tabla_Salida.Designer.cs">
+      <DependentUpon>201906280404151_Tabla_Salida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906301648314_Salida_CantidadTotal.cs" />
+    <Compile Include="Migrations\201906301648314_Salida_CantidadTotal.Designer.cs">
+      <DependentUpon>201906301648314_Salida_CantidadTotal.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906270157176_TableInventario.resx">
       <DependentUpon>201906270157176_TableInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906280404151_Tabla_Salida.resx">
+      <DependentUpon>201906280404151_Tabla_Salida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906301648314_Salida_CantidadTotal.resx">
+      <DependentUpon>201906301648314_Salida_CantidadTotal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

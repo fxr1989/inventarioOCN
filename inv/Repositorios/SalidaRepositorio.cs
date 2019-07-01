@@ -3,41 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataBaseContext;
 using Modelo;
 using Repositorios.Interface;
-using DataBaseContext;
 
 namespace Repositorios
 {
-    public class EntradaRepositorio : Repositorio<Entrada>
+    public class SalidaRepositorio : Repositorio<Salida>
     {
         public IRepositorio<Ubicacion> ubicacion;
         public IRepositorio<Producto> producto;
         public InventarioRepositorio inventario;
 
-        public EntradaRepositorio(): base()
+        public SalidaRepositorio() : base()
         {
             ubicacion = new Repositorio<Ubicacion>(db);
             producto = new Repositorio<Producto>(db);
             inventario = new InventarioRepositorio(db);
         }
 
-        public EntradaRepositorio(InvContext context): base(context)
+        public SalidaRepositorio(InvContext context) : base(context)
         {
             ubicacion = new Repositorio<Ubicacion>(db);
             producto = new Repositorio<Producto>(db);
             inventario = new InventarioRepositorio(db);
         }
 
-        public override void Agregar(Entrada entrada)
+        public override void Agregar(Salida salida)
         {
             var transaccionDb = db.Database.BeginTransaction();
             try
             {
-                db.Entradas.Add(entrada);
+                db.Salidas.Add(salida);
                 db.SaveChanges();
 
-                inventario.EntradaMovimiento(entrada);
+                inventario.SalidaMovimiento(salida);
                 db.SaveChanges();
 
                 transaccionDb.Commit();

@@ -15,19 +15,19 @@ using DevExpress.XtraGrid.Columns;
 
 namespace Presentacion.Formularios.Buscadores
 {
-    public partial class FrmBuscarCategoria<T> : DevExpress.XtraEditors.XtraForm where T: class
+    public partial class FrmBuscar<T> : DevExpress.XtraEditors.XtraForm where T: class
     {
         private IRepositorio<T> repositorio;
         private string nombreColumnaMostrar1;
         private string nombreColumnaMostrar2;
         public T resultado;
-        public FrmBuscarCategoria()
+        public FrmBuscar()
         {
             repositorio = new Repositorio<T>();
             InitializeComponent();
         }
 
-        public FrmBuscarCategoria(string tituloFormulario, string columnaMostrar1, string columnaMostrar2)
+        public FrmBuscar(string tituloFormulario, string columnaMostrar1, string columnaMostrar2)
         {
             Text = tituloFormulario;
             nombreColumnaMostrar1 = columnaMostrar1;

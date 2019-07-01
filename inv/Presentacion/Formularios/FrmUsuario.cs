@@ -198,7 +198,7 @@ namespace Presentacion.Formularios
 
         private void BuscarArea()
         {
-            var buscar = new FrmBuscarCategoria<Area>("Buscar area", "AreaID", "Nombre");
+            var buscar = new FrmBuscar<Area>("Buscar area", "AreaID", "Nombre");
             if (buscar.ShowDialog() == DialogResult.OK)
             {
                 var area = buscar.resultado;
