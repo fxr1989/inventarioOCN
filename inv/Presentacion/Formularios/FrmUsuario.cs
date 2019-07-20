@@ -32,7 +32,14 @@ namespace Presentacion.Formularios
 
         private void FrmArea_Load(object sender, EventArgs e)
         {
-            CargarDatos();
+            try
+            {
+                CargarDatos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BotonAccionClick(object sender, EventArgs e)
@@ -89,6 +96,16 @@ namespace Presentacion.Formularios
                             ).ToList();
             gUsuario.DataSource = usuarios;
             gvUsuarios.Columns["area"].Visible = false;            
+        }
+
+        private void CargarCombobox()
+        {
+            var usuarios = (
+                                from usuario in repositorio.Obtener()
+                                select new { Usuario = usuario.NombreUsuario, usuario.Correo, usuario.Nombres, usuario.Apellidos, Area = usuario.area.Nombre, usuario.area }
+                            ).ToList();
+            gUsuario.DataSource = usuarios;
+            gvUsuarios.Columns["area"].Visible = false;
         }
 
         private void Guardar()

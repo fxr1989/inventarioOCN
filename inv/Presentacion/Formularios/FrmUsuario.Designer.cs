@@ -32,6 +32,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gcDatosUsuario = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtCorreo = new DevExpress.XtraEditors.TextEdit();
             this.btnArea = new DevExpress.XtraEditors.ButtonEdit();
             this.txtNombres = new DevExpress.XtraEditors.TextEdit();
             this.txtApellidos = new DevExpress.XtraEditors.TextEdit();
@@ -50,19 +51,21 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gUsuario = new DevExpress.XtraGrid.GridControl();
             this.gvUsuarios = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtCorreo = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDatosUsuario)).BeginInit();
             this.gcDatosUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnArea.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).BeginInit();
@@ -77,13 +80,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -111,6 +115,7 @@
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.lookUpEdit1);
             this.layoutControl2.Controls.Add(this.txtCorreo);
             this.layoutControl2.Controls.Add(this.btnArea);
             this.layoutControl2.Controls.Add(this.txtNombres);
@@ -125,6 +130,17 @@
             this.layoutControl2.Size = new System.Drawing.Size(288, 664);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(12, 121);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Properties.Appearance.Options.UseFont = true;
+            this.txtCorreo.Properties.ReadOnly = true;
+            this.txtCorreo.Size = new System.Drawing.Size(264, 22);
+            this.txtCorreo.StyleController = this.layoutControl2;
+            this.txtCorreo.TabIndex = 12;
             // 
             // btnArea
             // 
@@ -185,9 +201,9 @@
             this.groupControl2.Controls.Add(this.btnEliminar);
             this.groupControl2.Controls.Add(this.btnModificar);
             this.groupControl2.Controls.Add(this.btnNuevo);
-            this.groupControl2.Location = new System.Drawing.Point(12, 282);
+            this.groupControl2.Location = new System.Drawing.Point(12, 325);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(264, 370);
+            this.groupControl2.Size = new System.Drawing.Size(264, 327);
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "Botones de Accion";
             // 
@@ -284,7 +300,8 @@
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem9,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem10});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(288, 664);
@@ -303,9 +320,9 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.groupControl2;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 270);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 313);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(268, 374);
+            this.layoutControlItem3.Size = new System.Drawing.Size(268, 331);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -348,6 +365,16 @@
             this.layoutControlItem9.Text = "Area";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(75, 16);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.txtCorreo;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 90);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(268, 45);
+            this.layoutControlItem8.Text = "Correo";
+            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(75, 16);
             // 
             // gUsuario
             // 
@@ -402,26 +429,27 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // txtCorreo
+            // lookUpEdit1
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(12, 121);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Properties.Appearance.Options.UseFont = true;
-            this.txtCorreo.Properties.ReadOnly = true;
-            this.txtCorreo.Size = new System.Drawing.Size(264, 22);
-            this.txtCorreo.StyleController = this.layoutControl2;
-            this.txtCorreo.TabIndex = 12;
+            this.lookUpEdit1.Location = new System.Drawing.Point(12, 301);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.NullText = "";
+            this.lookUpEdit1.Properties.ReadOnly = true;
+            this.lookUpEdit1.Size = new System.Drawing.Size(264, 20);
+            this.lookUpEdit1.StyleController = this.layoutControl2;
+            this.lookUpEdit1.TabIndex = 13;
             // 
-            // layoutControlItem8
+            // layoutControlItem10
             // 
-            this.layoutControlItem8.Control = this.txtCorreo;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 90);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(268, 45);
-            this.layoutControlItem8.Text = "Correo";
-            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(75, 16);
+            this.layoutControlItem10.Control = this.lookUpEdit1;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 270);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(268, 43);
+            this.layoutControlItem10.Text = "Rol";
+            this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(75, 16);
             // 
             // FrmUsuario
             // 
@@ -439,6 +467,7 @@
             this.gcDatosUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnArea.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).EndInit();
@@ -453,13 +482,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -494,5 +524,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraEditors.TextEdit txtCorreo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }

@@ -27,6 +27,9 @@ namespace DataBaseContext
         public DbSet<Inventario> Inventarios { get; set; }
         public DbSet<Salida> Salidas { get; set; }
         public DbSet<SalidaLinea> SalidasLineas { get; set; }
+        public DbSet<Rol> Roles { get; set; }
+        public DbSet<RolAcceso> RolesAcceso { get; set; }
+        public DbSet<Permiso> Permisos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -42,6 +45,9 @@ namespace DataBaseContext
             modelBuilder.Configurations.Add(new InventarioConfig());
             modelBuilder.Configurations.Add(new SalidaConfig());
             modelBuilder.Configurations.Add(new SalidaLineaConfig());
+            modelBuilder.Configurations.Add(new RolConfig());
+            modelBuilder.Configurations.Add(new RolAccesoConfig());
+            modelBuilder.Configurations.Add(new PermisoConfig());
 
             base.OnModelCreating(modelBuilder);
         }

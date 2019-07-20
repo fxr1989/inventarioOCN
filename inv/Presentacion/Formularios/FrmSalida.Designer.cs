@@ -33,15 +33,16 @@
             this.gLinea = new DevExpress.XtraGrid.GridControl();
             this.gvLinea = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcProducto = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repCboProductos = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gcUbicacion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repCboUbicacion = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gcDisponible = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcCantidad = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repTxtCantidad = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gcObservacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repTxtPrecioUnitario = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemTextEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repCboUbicacion = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repCboProductos = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gbDatosEntrada = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -58,17 +59,16 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gcDisponible = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gLinea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLinea)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repCboProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repCboUbicacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTxtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTxtPrecioUnitario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repCboUbicacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repCboProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosEntrada)).BeginInit();
             this.gbDatosEntrada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -144,14 +144,6 @@
             this.gcProducto.Visible = true;
             this.gcProducto.VisibleIndex = 0;
             // 
-            // repCboProductos
-            // 
-            this.repCboProductos.AutoHeight = false;
-            this.repCboProductos.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repCboProductos.Name = "repCboProductos";
-            this.repCboProductos.NullText = "";
-            // 
             // gcUbicacion
             // 
             this.gcUbicacion.Caption = "Ubicacion";
@@ -160,13 +152,13 @@
             this.gcUbicacion.Visible = true;
             this.gcUbicacion.VisibleIndex = 1;
             // 
-            // repCboUbicacion
+            // gcDisponible
             // 
-            this.repCboUbicacion.AutoHeight = false;
-            this.repCboUbicacion.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repCboUbicacion.Name = "repCboUbicacion";
-            this.repCboUbicacion.NullText = "";
+            this.gcDisponible.Caption = "Dispononible";
+            this.gcDisponible.FieldName = "Disponible";
+            this.gcDisponible.Name = "gcDisponible";
+            this.gcDisponible.Visible = true;
+            this.gcDisponible.VisibleIndex = 2;
             // 
             // gcCantidad
             // 
@@ -215,6 +207,22 @@
             this.repositoryItemTextEdit3.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.repositoryItemTextEdit3.Name = "repositoryItemTextEdit3";
             this.repositoryItemTextEdit3.ReadOnly = true;
+            // 
+            // repCboUbicacion
+            // 
+            this.repCboUbicacion.AutoHeight = false;
+            this.repCboUbicacion.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repCboUbicacion.Name = "repCboUbicacion";
+            this.repCboUbicacion.NullText = "";
+            // 
+            // repCboProductos
+            // 
+            this.repCboProductos.AutoHeight = false;
+            this.repCboProductos.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repCboProductos.Name = "repCboProductos";
+            this.repCboProductos.NullText = "";
             // 
             // gbDatosEntrada
             // 
@@ -395,14 +403,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // gcDisponible
-            // 
-            this.gcDisponible.Caption = "Dispononible";
-            this.gcDisponible.FieldName = "Disponible";
-            this.gcDisponible.Name = "gcDisponible";
-            this.gcDisponible.Visible = true;
-            this.gcDisponible.VisibleIndex = 2;
-            // 
             // FrmSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,12 +417,12 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gLinea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLinea)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repCboProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repCboUbicacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTxtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTxtPrecioUnitario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repCboUbicacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repCboProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbDatosEntrada)).EndInit();
             this.gbDatosEntrada.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();

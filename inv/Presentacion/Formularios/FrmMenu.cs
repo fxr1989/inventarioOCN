@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using Presentacion.Formularios;
+using DevExpress.XtraReports.UI;
+using Presentacion.Informacion;
 
 namespace Presentacion
 {
@@ -74,6 +76,11 @@ namespace Presentacion
             FrmInventario frmInventario = new FrmInventario();
             frmInventario.MdiParent = this;
             frmInventario.Show();
+        }       
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            bstUsuario.Caption = $"{Sesion.Usuario.NombreUsuario} {Sesion.Usuario.Apellidos}";            
         }
     }
 }

@@ -9,6 +9,7 @@ using DevExpress.XtraEditors;
 using Repositorios.Dto;
 using AutoMapper;
 using System.Collections.Generic;
+using DevExpress.XtraReports.UI;
 
 namespace Presentacion.Formularios
 {
@@ -45,6 +46,7 @@ namespace Presentacion.Formularios
             try
             {
                 CargarCombobox();
+                txtUsuario.Text = $"{Informacion.Sesion.Usuario.Nombres} {Informacion.Sesion.Usuario.Apellidos}";
             }
             catch (Exception ex)
             {
@@ -120,15 +122,25 @@ namespace Presentacion.Formularios
                 salida.Fecha = Convert.ToDateTime(deFechaEntrada.EditValue ?? DateTime.Now);
                 salida.FechaIngreso = DateTime.Now;
                 salida.CantidadTotal = Convert.ToInt32(txtTotal.Text);
-                salida.usuarioID = 1;
+                salida.usuarioID = Informacion.Sesion.Usuario.UsuarioID;
                 repositorio.Agregar(salida);
-                MessageBox.Show("Se realizo la salida correctamente.", "Salida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (MessageBox.Show("Se realizo la salida correctamente.Desea imprimir el acta?", "Salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    VistaPrevia(salida);
                 this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void VistaPrevia(Salida salida)
+        {
+            Reportes.rptSalida reporte = new Reportes.rptSalida();            
+            reporte.Parameters["pNombreUsuario"].Value = txtUsuario.Text;
+            reporte.Parameters["pFecha"].Value = salida.FechaIngreso;
+            reporte.DataSource = lineas;
+            reporte.ShowRibbonPreview();
         }
     }
 }

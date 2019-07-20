@@ -53,11 +53,17 @@
     <Compile Include="ConfiguracionDB\EntradaConfig.cs" />
     <Compile Include="ConfiguracionDB\EntradaLineaConfig.cs" />
     <Compile Include="ConfiguracionDB\InventarioConfig.cs" />
+    <Compile Include="ConfiguracionDB\PermisoConfig.cs" />
     <Compile Include="ConfiguracionDB\ProductoConfig.cs" />
+    <Compile Include="ConfiguracionDB\RolAccesoConfig.cs" />
+    <Compile Include="ConfiguracionDB\RolConfig.cs" />
     <Compile Include="ConfiguracionDB\SalidaConfig.cs" />
     <Compile Include="ConfiguracionDB\SalidaLineaConfig.cs" />
     <Compile Include="ConfiguracionDB\UbicacionConfig.cs" />
     <Compile Include="ConfiguracionDB\UsuarioConfig.cs" />
+    <Compile Include="DatosSemillas\AreaData.cs" />
+    <Compile Include="DatosSemillas\PermisoData.cs" />
+    <Compile Include="DatosSemillas\RolData.cs" />
     <Compile Include="InvContext.cs" />
     <Compile Include="Migrations\201906200315078_InitInvFeliz.cs" />
     <Compile Include="Migrations\201906200315078_InitInvFeliz.Designer.cs">
@@ -94,6 +100,18 @@
     <Compile Include="Migrations\201906301648314_Salida_CantidadTotal.cs" />
     <Compile Include="Migrations\201906301648314_Salida_CantidadTotal.Designer.cs">
       <DependentUpon>201906301648314_Salida_CantidadTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907010209174_roles.cs" />
+    <Compile Include="Migrations\201907010209174_roles.Designer.cs">
+      <DependentUpon>201907010209174_roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907010223120_roles1.cs" />
+    <Compile Include="Migrations\201907010223120_roles1.Designer.cs">
+      <DependentUpon>201907010223120_roles1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907192006416_tipoAcceso.cs" />
+    <Compile Include="Migrations\201907192006416_tipoAcceso.Designer.cs">
+      <DependentUpon>201907192006416_tipoAcceso.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,6 +152,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906301648314_Salida_CantidadTotal.resx">
       <DependentUpon>201906301648314_Salida_CantidadTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907010209174_roles.resx">
+      <DependentUpon>201907010209174_roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907010223120_roles1.resx">
+      <DependentUpon>201907010223120_roles1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907192006416_tipoAcceso.resx">
+      <DependentUpon>201907192006416_tipoAcceso.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

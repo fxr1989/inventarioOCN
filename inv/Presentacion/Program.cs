@@ -17,7 +17,11 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMenu());
+            FrmLogin login = new FrmLogin();
+            if (login.ShowDialog() == DialogResult.OK)
+                Application.Run(new FrmMenu());
+            else
+                Application.Exit();
         }
     }
 }
