@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Modelo;
 using Repositorios.Interface;
 using DataBaseContext;
+using Repositorios.Dto;
 
 namespace Repositorios
 {
@@ -76,5 +77,6 @@ namespace Repositorios
                 }
             }
         }
+
     }
 }

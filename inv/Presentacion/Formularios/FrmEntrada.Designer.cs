@@ -38,9 +38,11 @@
             this.repCboUbicacion = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gcCantidad = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repTxtCantidad = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.gcObservacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcMoneda = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repCboMoneda = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gcPrecioUnitario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repTxtPrecioUnitario = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.gcObservacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDonacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gcTotal = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,15 +52,11 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnGuardarEntrada = new DevExpress.XtraEditors.SimpleButton();
             this.btnAgregar = new DevExpress.XtraEditors.SimpleButton();
-            this.txtTotalDonacion = new DevExpress.XtraEditors.TextEdit();
-            this.txtTotal = new DevExpress.XtraEditors.TextEdit();
             this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
             this.deFechaEntrada = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -70,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repCboProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repCboUbicacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTxtCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repCboMoneda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTxtPrecioUnitario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
@@ -79,16 +78,12 @@
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalDonacion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFechaEntrada.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFechaEntrada.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -109,7 +104,7 @@
             // 
             // gLinea
             // 
-            this.gLinea.Location = new System.Drawing.Point(12, 209);
+            this.gLinea.Location = new System.Drawing.Point(12, 174);
             this.gLinea.MainView = this.gvLinea;
             this.gLinea.Name = "gLinea";
             this.gLinea.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -118,8 +113,9 @@
             this.repositoryItemCheckEdit1,
             this.repositoryItemTextEdit3,
             this.repCboUbicacion,
-            this.repCboProductos});
-            this.gLinea.Size = new System.Drawing.Size(941, 548);
+            this.repCboProductos,
+            this.repCboMoneda});
+            this.gLinea.Size = new System.Drawing.Size(941, 583);
             this.gLinea.TabIndex = 5;
             this.gLinea.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvLinea});
@@ -134,8 +130,9 @@
             this.gcProducto,
             this.gcUbicacion,
             this.gcCantidad,
-            this.gcObservacion,
+            this.gcMoneda,
             this.gcPrecioUnitario,
+            this.gcObservacion,
             this.gcDonacion,
             this.gcTotal});
             this.gvLinea.GridControl = this.gLinea;
@@ -196,13 +193,21 @@
             this.repTxtCantidad.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.repTxtCantidad.Name = "repTxtCantidad";
             // 
-            // gcObservacion
+            // gcMoneda
             // 
-            this.gcObservacion.Caption = "Observación";
-            this.gcObservacion.FieldName = "Observacion";
-            this.gcObservacion.Name = "gcObservacion";
-            this.gcObservacion.Visible = true;
-            this.gcObservacion.VisibleIndex = 6;
+            this.gcMoneda.Caption = "Moneda";
+            this.gcMoneda.ColumnEdit = this.repCboMoneda;
+            this.gcMoneda.FieldName = "monedaID";
+            this.gcMoneda.Name = "gcMoneda";
+            this.gcMoneda.Visible = true;
+            this.gcMoneda.VisibleIndex = 3;
+            // 
+            // repCboMoneda
+            // 
+            this.repCboMoneda.AutoHeight = false;
+            this.repCboMoneda.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repCboMoneda.Name = "repCboMoneda";
             // 
             // gcPrecioUnitario
             // 
@@ -211,7 +216,7 @@
             this.gcPrecioUnitario.FieldName = "PrecioUnitario";
             this.gcPrecioUnitario.Name = "gcPrecioUnitario";
             this.gcPrecioUnitario.Visible = true;
-            this.gcPrecioUnitario.VisibleIndex = 3;
+            this.gcPrecioUnitario.VisibleIndex = 4;
             // 
             // repTxtPrecioUnitario
             // 
@@ -222,6 +227,14 @@
             this.repTxtPrecioUnitario.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.repTxtPrecioUnitario.Name = "repTxtPrecioUnitario";
             // 
+            // gcObservacion
+            // 
+            this.gcObservacion.Caption = "Observación";
+            this.gcObservacion.FieldName = "Observacion";
+            this.gcObservacion.Name = "gcObservacion";
+            this.gcObservacion.Visible = true;
+            this.gcObservacion.VisibleIndex = 7;
+            // 
             // gcDonacion
             // 
             this.gcDonacion.Caption = "Donación";
@@ -229,7 +242,7 @@
             this.gcDonacion.FieldName = "Donacion";
             this.gcDonacion.Name = "gcDonacion";
             this.gcDonacion.Visible = true;
-            this.gcDonacion.VisibleIndex = 5;
+            this.gcDonacion.VisibleIndex = 6;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -242,7 +255,7 @@
             this.gcTotal.FieldName = "Total";
             this.gcTotal.Name = "gcTotal";
             this.gcTotal.Visible = true;
-            this.gcTotal.VisibleIndex = 4;
+            this.gcTotal.VisibleIndex = 5;
             // 
             // repositoryItemTextEdit3
             // 
@@ -259,22 +272,20 @@
             this.gbDatosEntrada.Controls.Add(this.layoutControl2);
             this.gbDatosEntrada.Location = new System.Drawing.Point(12, 12);
             this.gbDatosEntrada.Name = "gbDatosEntrada";
-            this.gbDatosEntrada.Size = new System.Drawing.Size(941, 193);
+            this.gbDatosEntrada.Size = new System.Drawing.Size(941, 158);
             this.gbDatosEntrada.TabIndex = 4;
             this.gbDatosEntrada.Text = "Datos de entrada";
             // 
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.panelControl1);
-            this.layoutControl2.Controls.Add(this.txtTotalDonacion);
-            this.layoutControl2.Controls.Add(this.txtTotal);
             this.layoutControl2.Controls.Add(this.txtUsuario);
             this.layoutControl2.Controls.Add(this.deFechaEntrada);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(2, 23);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(937, 168);
+            this.layoutControl2.Size = new System.Drawing.Size(937, 133);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -283,9 +294,9 @@
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Controls.Add(this.btnGuardarEntrada);
             this.panelControl1.Controls.Add(this.btnAgregar);
-            this.panelControl1.Location = new System.Drawing.Point(12, 102);
+            this.panelControl1.Location = new System.Drawing.Point(12, 57);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(913, 54);
+            this.panelControl1.Size = new System.Drawing.Size(913, 64);
             this.panelControl1.TabIndex = 8;
             // 
             // btnGuardarEntrada
@@ -309,28 +320,6 @@
             this.btnAgregar.Size = new System.Drawing.Size(51, 38);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // txtTotalDonacion
-            // 
-            this.txtTotalDonacion.Location = new System.Drawing.Point(470, 76);
-            this.txtTotalDonacion.Name = "txtTotalDonacion";
-            this.txtTotalDonacion.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalDonacion.Properties.Appearance.Options.UseFont = true;
-            this.txtTotalDonacion.Properties.ReadOnly = true;
-            this.txtTotalDonacion.Size = new System.Drawing.Size(455, 22);
-            this.txtTotalDonacion.StyleController = this.layoutControl2;
-            this.txtTotalDonacion.TabIndex = 7;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(12, 76);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Properties.Appearance.Options.UseFont = true;
-            this.txtTotal.Properties.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(454, 22);
-            this.txtTotal.StyleController = this.layoutControl2;
-            this.txtTotal.TabIndex = 6;
             // 
             // txtUsuario
             // 
@@ -367,12 +356,10 @@
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
             this.layoutControlItem7});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(937, 168);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(937, 133);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem3
@@ -395,32 +382,12 @@
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(128, 16);
             // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.txtTotal;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 45);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(458, 45);
-            this.layoutControlItem5.Text = "Total";
-            this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(128, 16);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.txtTotalDonacion;
-            this.layoutControlItem6.Location = new System.Drawing.Point(458, 45);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(459, 45);
-            this.layoutControlItem6.Text = "Total Donación";
-            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(128, 16);
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.panelControl1;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 90);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 45);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(917, 58);
+            this.layoutControlItem7.Size = new System.Drawing.Size(917, 68);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -441,16 +408,16 @@
             this.layoutControlItem1.Control = this.gbDatosEntrada;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(945, 197);
+            this.layoutControlItem1.Size = new System.Drawing.Size(945, 162);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gLinea;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 197);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 162);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(945, 552);
+            this.layoutControlItem2.Size = new System.Drawing.Size(945, 587);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -471,6 +438,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repCboProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repCboUbicacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTxtCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repCboMoneda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTxtPrecioUnitario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
@@ -480,16 +448,12 @@
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalDonacion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFechaEntrada.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFechaEntrada.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -519,14 +483,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraEditors.TextEdit txtTotalDonacion;
-        private DevExpress.XtraEditors.TextEdit txtTotal;
         private DevExpress.XtraEditors.TextEdit txtUsuario;
         private DevExpress.XtraEditors.DateEdit deFechaEntrada;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnAgregar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
@@ -534,5 +494,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repCboProductos;
         private DevExpress.XtraGrid.Columns.GridColumn gcObservacion;
         private DevExpress.XtraEditors.SimpleButton btnGuardarEntrada;
+        private DevExpress.XtraGrid.Columns.GridColumn gcMoneda;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repCboMoneda;
     }
 }

@@ -14,7 +14,10 @@ namespace Modelo
         public string Descripcion { get; set; }
         public string CodigoBarra { get; set; }
         public string Modelo { get; set; }
+        public string NumeroSerie { get; set; }
         public int categoriaID { get; set; }
+        public int marcaID { get; set; }
         public virtual Categoria categoria { get; set; }
+        public virtual Marca marca { get; set; }
     }
 }

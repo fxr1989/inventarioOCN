@@ -6,19 +6,22 @@ using System.Text;
 using System.Threading.Tasks;
 using DataBaseContext;
 using Modelo;
+using Repositorios.Interface;
 
 namespace Repositorios
 {
     public class UsuarioRepositorio : Repositorio<Usuario>
     {
+        private readonly IRepositorio<Rol> rolAccesoRepositorio;
+
         public UsuarioRepositorio(): base()
         {
-
+            rolAccesoRepositorio = new Repositorio<Rol>(db);
         }
 
         public UsuarioRepositorio(InvContext context): base(context)
         {
-
+            rolAccesoRepositorio = new Repositorio<Rol>(db);
         }
 
         public override void Agregar(Usuario entidad)

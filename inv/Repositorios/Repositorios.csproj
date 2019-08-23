@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="Dto\EntradaDto.cs" />
     <Compile Include="Dto\EntradaLineaDto.cs" />
+    <Compile Include="Dto\InventarioDto.cs" />
+    <Compile Include="Dto\RolAccesoDto.cs" />
     <Compile Include="Dto\SalidaDto.cs" />
     <Compile Include="Dto\SalidaLineaDto.cs" />
     <Compile Include="EntradaRepositorio.cs" />
@@ -57,7 +59,10 @@
     <Compile Include="InventarioRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio.cs" />
+    <Compile Include="RolAccesoRepositorio.cs" />
+    <Compile Include="RolRepositorio.cs" />
     <Compile Include="SalidaRepositorio.cs" />
+    <Compile Include="Static\ConfiguracionDB.cs" />
     <Compile Include="UsuarioRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>

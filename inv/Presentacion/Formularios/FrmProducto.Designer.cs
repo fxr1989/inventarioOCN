@@ -32,6 +32,8 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gcDatosAreas = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtNumeroSerial = new DevExpress.XtraEditors.TextEdit();
+            this.btnMarca = new DevExpress.XtraEditors.ButtonEdit();
             this.btnCategoria = new DevExpress.XtraEditors.ButtonEdit();
             this.txtDescripcion = new DevExpress.XtraEditors.MemoEdit();
             this.txtModelo = new DevExpress.XtraEditors.TextEdit();
@@ -52,6 +54,8 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gProducto = new DevExpress.XtraGrid.GridControl();
             this.gvProducto = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -63,6 +67,8 @@
             this.gcDatosAreas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumeroSerial.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMarca.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCategoria.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtModelo.Properties)).BeginInit();
@@ -79,6 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -94,7 +102,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(892, 711);
+            this.layoutControl1.Size = new System.Drawing.Size(892, 740);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -105,12 +113,14 @@
             this.gcDatosAreas.Controls.Add(this.layoutControl2);
             this.gcDatosAreas.Location = new System.Drawing.Point(12, 12);
             this.gcDatosAreas.Name = "gcDatosAreas";
-            this.gcDatosAreas.Size = new System.Drawing.Size(292, 687);
+            this.gcDatosAreas.Size = new System.Drawing.Size(292, 716);
             this.gcDatosAreas.TabIndex = 5;
-            this.gcDatosAreas.Text = "Datos de las areas";
+            this.gcDatosAreas.Text = "Datos de los productos";
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.txtNumeroSerial);
+            this.layoutControl2.Controls.Add(this.btnMarca);
             this.layoutControl2.Controls.Add(this.btnCategoria);
             this.layoutControl2.Controls.Add(this.txtDescripcion);
             this.layoutControl2.Controls.Add(this.txtModelo);
@@ -122,13 +132,39 @@
             this.layoutControl2.Location = new System.Drawing.Point(2, 21);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(288, 664);
+            this.layoutControl2.Size = new System.Drawing.Size(288, 693);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // txtNumeroSerial
+            // 
+            this.txtNumeroSerial.Location = new System.Drawing.Point(12, 211);
+            this.txtNumeroSerial.Name = "txtNumeroSerial";
+            this.txtNumeroSerial.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroSerial.Properties.Appearance.Options.UseFont = true;
+            this.txtNumeroSerial.Properties.ReadOnly = true;
+            this.txtNumeroSerial.Size = new System.Drawing.Size(264, 22);
+            this.txtNumeroSerial.StyleController = this.layoutControl2;
+            this.txtNumeroSerial.TabIndex = 13;
+            // 
+            // btnMarca
+            // 
+            this.btnMarca.Location = new System.Drawing.Point(12, 256);
+            this.btnMarca.Name = "btnMarca";
+            this.btnMarca.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarca.Properties.Appearance.Options.UseFont = true;
+            this.btnMarca.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.btnMarca.Properties.ReadOnly = true;
+            this.btnMarca.Size = new System.Drawing.Size(264, 22);
+            this.btnMarca.StyleController = this.layoutControl2;
+            this.btnMarca.TabIndex = 12;
+            this.btnMarca.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnMarca_ButtonClick);
+            this.btnMarca.DoubleClick += new System.EventHandler(this.btnMarca_DoubleClick);
+            // 
             // btnCategoria
             // 
-            this.btnCategoria.Location = new System.Drawing.Point(12, 211);
+            this.btnCategoria.Location = new System.Drawing.Point(12, 301);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.Properties.Appearance.Options.UseFont = true;
@@ -144,10 +180,10 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(12, 256);
+            this.txtDescripcion.Location = new System.Drawing.Point(12, 346);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Properties.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(264, 120);
+            this.txtDescripcion.Size = new System.Drawing.Size(264, 50);
             this.txtDescripcion.StyleController = this.layoutControl2;
             this.txtDescripcion.TabIndex = 10;
             // 
@@ -193,14 +229,15 @@
             this.groupControl2.Controls.Add(this.btnEliminar);
             this.groupControl2.Controls.Add(this.btnModificar);
             this.groupControl2.Controls.Add(this.btnNuevo);
-            this.groupControl2.Location = new System.Drawing.Point(12, 380);
+            this.groupControl2.Location = new System.Drawing.Point(12, 400);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(264, 272);
+            this.groupControl2.Size = new System.Drawing.Size(264, 281);
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "Botones de Accion";
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancelar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Appearance.Options.UseFont = true;
             this.btnCancelar.Enabled = false;
@@ -215,6 +252,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGuardar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Appearance.Options.UseFont = true;
             this.btnGuardar.Enabled = false;
@@ -229,6 +267,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEliminar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Appearance.Options.UseFont = true;
             this.btnEliminar.Enabled = false;
@@ -243,6 +282,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnModificar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Appearance.Options.UseFont = true;
             this.btnModificar.Enabled = false;
@@ -257,10 +297,11 @@
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNuevo.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Appearance.Options.UseFont = true;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(58, 41);
+            this.btnNuevo.Location = new System.Drawing.Point(58, 39);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(108, 37);
             this.btnNuevo.TabIndex = 0;
@@ -292,10 +333,12 @@
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem8,
-            this.layoutControlItem9});
+            this.layoutControlItem9,
+            this.layoutControlItem10,
+            this.layoutControlItem11});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(288, 664);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(288, 693);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem4
@@ -311,9 +354,9 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.groupControl2;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 368);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 388);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(268, 276);
+            this.layoutControlItem3.Size = new System.Drawing.Size(268, 285);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -350,9 +393,9 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.txtDescripcion;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 225);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 315);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(268, 143);
+            this.layoutControlItem8.Size = new System.Drawing.Size(268, 73);
             this.layoutControlItem8.Text = "Descripción";
             this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(103, 16);
@@ -360,19 +403,39 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnCategoria;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 180);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 270);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(268, 45);
             this.layoutControlItem9.Text = "Categoria";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(103, 16);
             // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.btnMarca;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 225);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(268, 45);
+            this.layoutControlItem10.Text = "Marca";
+            this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(103, 16);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.txtNumeroSerial;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 180);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(268, 45);
+            this.layoutControlItem11.Text = "Numero Serial";
+            this.layoutControlItem11.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(103, 16);
+            // 
             // gProducto
             // 
             this.gProducto.Location = new System.Drawing.Point(308, 12);
             this.gProducto.MainView = this.gvProducto;
             this.gProducto.Name = "gProducto";
-            this.gProducto.Size = new System.Drawing.Size(572, 687);
+            this.gProducto.Size = new System.Drawing.Size(572, 716);
             this.gProducto.TabIndex = 4;
             this.gProducto.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProducto});
@@ -399,7 +462,7 @@
             this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(892, 711);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(892, 740);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -407,7 +470,7 @@
             this.layoutControlItem1.Control = this.gProducto;
             this.layoutControlItem1.Location = new System.Drawing.Point(296, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(576, 691);
+            this.layoutControlItem1.Size = new System.Drawing.Size(576, 720);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -416,7 +479,7 @@
             this.layoutControlItem2.Control = this.gcDatosAreas;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(296, 691);
+            this.layoutControlItem2.Size = new System.Drawing.Size(296, 720);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -424,11 +487,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 711);
+            this.ClientSize = new System.Drawing.Size(892, 740);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FrmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Area";
+            this.Text = "Producto";
             this.Load += new System.EventHandler(this.FrmArea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -436,6 +499,8 @@
             this.gcDatosAreas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumeroSerial.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMarca.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCategoria.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtModelo.Properties)).EndInit();
@@ -452,6 +517,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -491,5 +558,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraEditors.ButtonEdit btnCategoria;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraEditors.TextEdit txtNumeroSerial;
+        private DevExpress.XtraEditors.ButtonEdit btnMarca;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }

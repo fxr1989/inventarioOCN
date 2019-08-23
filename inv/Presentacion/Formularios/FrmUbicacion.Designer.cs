@@ -289,7 +289,7 @@
             this.ClientSize = new System.Drawing.Size(810, 580);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FrmUbicacion";
-            this.Text = "Area";
+            this.Text = "Ubicación";
             this.Load += new System.EventHandler(this.FrmArea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

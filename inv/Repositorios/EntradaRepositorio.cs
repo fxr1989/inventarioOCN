@@ -13,12 +13,14 @@ namespace Repositorios
     {
         public IRepositorio<Ubicacion> ubicacion;
         public IRepositorio<Producto> producto;
+        public IRepositorio<Moneda> moneda;
         public InventarioRepositorio inventario;
 
         public EntradaRepositorio(): base()
         {
             ubicacion = new Repositorio<Ubicacion>(db);
             producto = new Repositorio<Producto>(db);
+            moneda = new Repositorio<Moneda>(db);
             inventario = new InventarioRepositorio(db);
         }
 

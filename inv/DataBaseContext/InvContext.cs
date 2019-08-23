@@ -12,7 +12,7 @@ namespace DataBaseContext
 {
     public class InvContext : DbContext
     {
-        public InvContext(): base("Presentacion.Properties.Settings.CadenaConexion")
+        public InvContext() : base(Static.ConfiguracionDB.CadenaConexion)
         {
 
         }
@@ -30,6 +30,8 @@ namespace DataBaseContext
         public DbSet<Rol> Roles { get; set; }
         public DbSet<RolAcceso> RolesAcceso { get; set; }
         public DbSet<Permiso> Permisos { get; set; }
+        public DbSet<Marca> Marcas { get; set; }
+        public DbSet<Moneda> Monedas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -48,6 +50,8 @@ namespace DataBaseContext
             modelBuilder.Configurations.Add(new RolConfig());
             modelBuilder.Configurations.Add(new RolAccesoConfig());
             modelBuilder.Configurations.Add(new PermisoConfig());
+            modelBuilder.Configurations.Add(new MarcaConfig());
+            modelBuilder.Configurations.Add(new MonedaConfig());
 
             base.OnModelCreating(modelBuilder);
         }

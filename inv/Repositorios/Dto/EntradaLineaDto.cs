@@ -24,5 +24,6 @@ namespace Repositorios.Dto
         public bool Donacion { get; set; }
         public DateTime FechaIngreso { get; set; }
         public string Observacion { get; set; }
+        public int monedaID { get; set; }
     }
 }

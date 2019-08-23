@@ -53,6 +53,9 @@
     <Compile Include="ConfiguracionDB\EntradaConfig.cs" />
     <Compile Include="ConfiguracionDB\EntradaLineaConfig.cs" />
     <Compile Include="ConfiguracionDB\InventarioConfig.cs" />
+    <Compile Include="ConfiguracionDB\MarcaConfig.cs" />
+    <Compile Include="ConfiguracionDB\MonedaConfig.cs" />
+    <Compile Include="DatosSemillas\MonedaData.cs" />
     <Compile Include="ConfiguracionDB\PermisoConfig.cs" />
     <Compile Include="ConfiguracionDB\ProductoConfig.cs" />
     <Compile Include="ConfiguracionDB\RolAccesoConfig.cs" />
@@ -113,8 +116,21 @@
     <Compile Include="Migrations\201907192006416_tipoAcceso.Designer.cs">
       <DependentUpon>201907192006416_tipoAcceso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907270248185_formularioPermiso.cs" />
+    <Compile Include="Migrations\201907270248185_formularioPermiso.Designer.cs">
+      <DependentUpon>201907270248185_formularioPermiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907290020372_Marca_ModificarModeloProducto.cs" />
+    <Compile Include="Migrations\201907290020372_Marca_ModificarModeloProducto.Designer.cs">
+      <DependentUpon>201907290020372_Marca_ModificarModeloProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908090200385_Entidad_Moneda_Relacion_Entrada.cs" />
+    <Compile Include="Migrations\201908090200385_Entidad_Moneda_Relacion_Entrada.Designer.cs">
+      <DependentUpon>201908090200385_Entidad_Moneda_Relacion_Entrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static\ConfiguracionDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
@@ -161,6 +177,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907192006416_tipoAcceso.resx">
       <DependentUpon>201907192006416_tipoAcceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907270248185_formularioPermiso.resx">
+      <DependentUpon>201907270248185_formularioPermiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907290020372_Marca_ModificarModeloProducto.resx">
+      <DependentUpon>201907290020372_Marca_ModificarModeloProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908090200385_Entidad_Moneda_Relacion_Entrada.resx">
+      <DependentUpon>201908090200385_Entidad_Moneda_Relacion_Entrada.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

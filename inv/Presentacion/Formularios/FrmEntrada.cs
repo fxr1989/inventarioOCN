@@ -34,6 +34,8 @@ namespace Presentacion.Formularios
             try
             {
                 CargarCombobox();
+                txtUsuario.Text = $"{Informacion.Sesion.Usuario.Nombres} {Informacion.Sesion.Usuario.Apellidos}";
+                deFechaEntrada.EditValue = DateTime.Now;
             }
             catch (Exception ex)
             {
@@ -62,6 +64,14 @@ namespace Presentacion.Formularios
             repCboProductos.DataSource = productos;
             repCboProductos.PopulateColumns();
             repCboProductos.Columns["ProductoID"].Visible = false;
+            //Monedas
+            var monedas = repositorio.moneda.Obtener().ToList();
+            repCboMoneda.DisplayMember = "Simbolo";
+            repCboMoneda.ValueMember = "MonedaID";
+            repCboMoneda.DataSource = monedas;
+            repCboMoneda.PopulateColumns();
+            repCboMoneda.Columns["MonedaID"].Visible = false;
+            repCboMoneda.Columns["Nombre"].Visible = false;
         }
         private void gvLinea_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
@@ -69,7 +79,7 @@ namespace Presentacion.Formularios
             {
                 if (e.Column.FieldName == "Cantidad" || e.Column.FieldName == "PrecioUnitario" || e.Column.FieldName == "Donacion")
                 {
-                    ActualizarTotales();
+                    //ActualizarTotales();
                 }
             }
             catch (Exception ex)
@@ -89,8 +99,8 @@ namespace Presentacion.Formularios
                 else
                     total = total + item.Total;
             }
-            txtTotal.Text = total.ToString("0.00");
-            txtTotalDonacion.Text = totalDonacion.ToString("0.00");
+            //txtTotal.Text = total.ToString("0.00");
+            //txtTotalDonacion.Text = totalDonacion.ToString("0.00");
         }
 
         private void btnGuardarEntrada_Click(object sender, EventArgs e)
@@ -107,18 +117,17 @@ namespace Presentacion.Formularios
                         productoID = linea.productoID,
                         ubicacionID = linea.ubicacionID,
                         Cantidad = linea.Cantidad,
+                        monedaID = linea.monedaID,
                         PrecioUnitario = linea.PrecioUnitario,
                         Total = linea.Total,
                         Donacion = linea.Donacion,
-                        FechaIngreso = DateTime.Now,
+                        FechaIngreso = DateTime.Now.Date,
                         Observacion = linea.Observacion
                     });
                 }
                 entrada.Fecha = Convert.ToDateTime(deFechaEntrada.EditValue);
-                entrada.FechaIngreso = DateTime.Now;
-                entrada.Total = Convert.ToDecimal(txtTotal.Text);
-                entrada.TotalDonaciones = Convert.ToDecimal(txtTotalDonacion.Text);
-                entrada.usuarioID = 1;
+                entrada.FechaIngreso = DateTime.Now.Date;                
+                entrada.usuarioID = Informacion.Sesion.Usuario.UsuarioID;
                 repositorio.Agregar(entrada);
                 MessageBox.Show("Se agrego entrada correctamente.", "Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

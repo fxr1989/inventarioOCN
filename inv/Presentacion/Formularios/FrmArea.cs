@@ -21,6 +21,7 @@ namespace Presentacion.Formularios
         private HelperFormulario helper;
         private IRepositorio<Area> areaRepositorio;
         private bool modificar;
+        public Modelo.RolAcceso acceso;
 
         public FrmArea()
         {

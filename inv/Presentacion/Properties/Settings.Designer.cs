@@ -26,7 +26,8 @@ namespace Presentacion.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=InvOCN;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\feliz\\Desktop\\invent" +
+            "arioOCN\\inventarioOCN\\inv\\Presentacion\\BD\\INVOCN.mdf;Integrated Security=True")]
         public string CadenaConexion {
             get {
                 return ((string)(this["CadenaConexion"]));

@@ -46,6 +46,8 @@
     <Compile Include="Entrada.cs" />
     <Compile Include="EntradaLinea.cs" />
     <Compile Include="Inventario.cs" />
+    <Compile Include="Marca.cs" />
+    <Compile Include="Moneda.cs" />
     <Compile Include="Permiso.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

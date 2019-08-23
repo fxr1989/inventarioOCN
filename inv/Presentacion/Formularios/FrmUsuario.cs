@@ -20,14 +20,14 @@ namespace Presentacion.Formularios
     public partial class FrmUsuario : DevExpress.XtraEditors.XtraForm
     {
         private HelperFormulario helper;
-        private IRepositorio<Usuario> repositorio;
+        private UsuarioRepositorio repositorio;        
         private bool modificar;
 
         public FrmUsuario()
         {
             InitializeComponent();
             helper = new HelperFormulario();
-            repositorio = new Repositorio<Usuario>();
+            repositorio = new UsuarioRepositorio(); ;            
         }
 
         private void FrmArea_Load(object sender, EventArgs e)

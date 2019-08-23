@@ -85,7 +85,7 @@
             this.gcDatosAreas.Controls.Add(this.layoutControl2);
             this.gcDatosAreas.Location = new System.Drawing.Point(12, 12);
             this.gcDatosAreas.Name = "gcDatosAreas";
-            this.gcDatosAreas.Size = new System.Drawing.Size(264, 556);
+            this.gcDatosAreas.Size = new System.Drawing.Size(241, 556);
             this.gcDatosAreas.TabIndex = 5;
             this.gcDatosAreas.Text = "Datos de las areas";
             // 
@@ -94,10 +94,10 @@
             this.layoutControl2.Controls.Add(this.groupControl2);
             this.layoutControl2.Controls.Add(this.txtCategoria);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl2.Location = new System.Drawing.Point(2, 23);
+            this.layoutControl2.Location = new System.Drawing.Point(2, 21);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(260, 531);
+            this.layoutControl2.Size = new System.Drawing.Size(237, 533);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -112,17 +112,18 @@
             this.groupControl2.Controls.Add(this.btnNuevo);
             this.groupControl2.Location = new System.Drawing.Point(12, 57);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(236, 462);
+            this.groupControl2.Size = new System.Drawing.Size(213, 464);
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "Botones de Accion";
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancelar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Appearance.Options.UseFont = true;
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(58, 213);
+            this.btnCancelar.Location = new System.Drawing.Point(46, 213);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(108, 37);
             this.btnCancelar.TabIndex = 5;
@@ -132,11 +133,12 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGuardar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Appearance.Options.UseFont = true;
             this.btnGuardar.Enabled = false;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(58, 170);
+            this.btnGuardar.Location = new System.Drawing.Point(46, 170);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(108, 37);
             this.btnGuardar.TabIndex = 4;
@@ -146,11 +148,12 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEliminar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Appearance.Options.UseFont = true;
             this.btnEliminar.Enabled = false;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(58, 127);
+            this.btnEliminar.Location = new System.Drawing.Point(46, 127);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(108, 37);
             this.btnEliminar.TabIndex = 3;
@@ -160,11 +163,12 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnModificar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Appearance.Options.UseFont = true;
             this.btnModificar.Enabled = false;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(58, 81);
+            this.btnModificar.Location = new System.Drawing.Point(46, 81);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(108, 40);
             this.btnModificar.TabIndex = 1;
@@ -174,10 +178,11 @@
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNuevo.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Appearance.Options.UseFont = true;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(58, 41);
+            this.btnNuevo.Location = new System.Drawing.Point(46, 41);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(108, 37);
             this.btnNuevo.TabIndex = 0;
@@ -192,7 +197,7 @@
             this.txtCategoria.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCategoria.Properties.Appearance.Options.UseFont = true;
             this.txtCategoria.Properties.ReadOnly = true;
-            this.txtCategoria.Size = new System.Drawing.Size(236, 22);
+            this.txtCategoria.Size = new System.Drawing.Size(213, 22);
             this.txtCategoria.StyleController = this.layoutControl2;
             this.txtCategoria.TabIndex = 5;
             // 
@@ -207,7 +212,7 @@
             this.layoutControlItem3});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(260, 531);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(237, 533);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem4
@@ -215,7 +220,7 @@
             this.layoutControlItem4.Control = this.txtCategoria;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(240, 45);
+            this.layoutControlItem4.Size = new System.Drawing.Size(217, 45);
             this.layoutControlItem4.Text = "Categoria";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(63, 16);
@@ -225,16 +230,16 @@
             this.layoutControlItem3.Control = this.groupControl2;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 45);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(240, 466);
+            this.layoutControlItem3.Size = new System.Drawing.Size(217, 468);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // gCategoria
             // 
-            this.gCategoria.Location = new System.Drawing.Point(280, 12);
+            this.gCategoria.Location = new System.Drawing.Point(257, 12);
             this.gCategoria.MainView = this.gvCategoria;
             this.gCategoria.Name = "gCategoria";
-            this.gCategoria.Size = new System.Drawing.Size(518, 556);
+            this.gCategoria.Size = new System.Drawing.Size(541, 556);
             this.gCategoria.TabIndex = 4;
             this.gCategoria.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCategoria});
@@ -267,9 +272,9 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.gCategoria;
-            this.layoutControlItem1.Location = new System.Drawing.Point(268, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(245, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(522, 560);
+            this.layoutControlItem1.Size = new System.Drawing.Size(545, 560);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -278,7 +283,7 @@
             this.layoutControlItem2.Control = this.gcDatosAreas;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(268, 560);
+            this.layoutControlItem2.Size = new System.Drawing.Size(245, 560);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -289,7 +294,7 @@
             this.ClientSize = new System.Drawing.Size(810, 580);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FrmCategoria";
-            this.Text = "Area";
+            this.Text = "Categoria";
             this.Load += new System.EventHandler(this.FrmArea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

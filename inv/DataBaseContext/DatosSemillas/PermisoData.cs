@@ -24,47 +24,73 @@ namespace DataBaseContext.DatosSemillas
                 new Permiso()
                 {
                     PermisoID = 1,
-                    Nombre = "Area"
+                    Nombre = "Area",
+                    Formulario = "FrmArea"
                 },
                 new Permiso()
                 {
                     PermisoID = 2,
-                    Nombre = "Categoria"
+                    Nombre = "Categoria",
+                    Formulario = "FrmCategoria"
                 },
                 new Permiso()
                 {
                     PermisoID = 3,
-                    Nombre = "Producto"
+                    Nombre = "Producto",
+                    Formulario = "FrmProducto"
                 },
                 new Permiso()
                 {
                     PermisoID = 4,
-                    Nombre = "Usuario"
+                    Nombre = "Usuario",
+                    Formulario = "FrmUsuario"
                 },
                 new Permiso()
                 {
                     PermisoID = 5,
-                    Nombre = "Rol"
+                    Nombre = "Rol",
+                    Formulario = "FrmRoles"
                 },
                 new Permiso()
                 {
                     PermisoID = 6,
-                    Nombre = "Ubicación"
+                    Nombre = "Ubicación",
+                    Formulario = "FrmUbicacion"
                 },
                 new Permiso()
                 {
                     PermisoID = 7,
-                    Nombre = "Entrada Inventario"
+                    Nombre = "Entrada Inventario",
+                    Formulario = "FrmEntrada"
                 },
                 new Permiso()
                 {
                     PermisoID = 8,
-                    Nombre = "Salida Inventario"
+                    Nombre = "Salida Inventario",
+                    Formulario = "FrmSalida"
+                },
+                new Permiso()
+                {
+                    PermisoID = 9,
+                    Nombre = "Inventario",
+                    Formulario = "FrmInventario"
+                },
+                new Permiso()
+                {
+                    PermisoID = 10,
+                    Nombre = "Reportes",
+                    Formulario = "FrmReportes"
+                },
+                new Permiso()
+                {
+                    PermisoID = 11,
+                    Nombre = "Marca",
+                    Formulario = "FrmMarca"
                 }
             };
             foreach (var permiso in permisos)
             {
-                if (!db.Permisos.Where(r => r.Nombre.ToUpper() == permiso.Nombre.ToUpper()).Any())
+                //if (!db.Permisos.Where(r => r.Nombre.ToUpper() == permiso.Nombre.ToUpper()).Any())
                     db.Permisos.AddOrUpdate(permiso);
             }
         }

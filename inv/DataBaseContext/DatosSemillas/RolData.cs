@@ -23,7 +23,7 @@ namespace DataBaseContext.DatosSemillas
             roles.Add(new Rol()
             {
                 RolID = 1,
-                Nombre = "Adminsitrador"
+                Nombre = "Administrador"
             });
             foreach (var rol in roles)
             {

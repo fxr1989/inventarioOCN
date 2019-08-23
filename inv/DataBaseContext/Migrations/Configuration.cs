@@ -28,16 +28,19 @@ namespace DataBaseContext.Migrations
             var usuarioAdmin = new Usuario()
             {
                 UsuarioID = 1,
-                NombreUsuario = "feliz",
-                Nombres = "Felix Javier",
-                Apellidos = "Ramirez",
+                NombreUsuario = "nadia",
+                Nombres = "Nadia",
+                Apellidos = "Nabhan",
                 Password = EncriptarPassword("123"),
-                Correo = "felixramirez19892019@gmail.com",
+                Correo = "Nadia.Nabhan@operationsmile.org",
                 rolID = 1,
                 AreaID = 1                
             };
             if (!context.Usuarios.Where(usuario =>usuario.NombreUsuario == usuarioAdmin.NombreUsuario).Any())
                 context.Usuarios.AddOrUpdate(usuarioAdmin);
+            MonedaData monedaData = new MonedaData(context);
+            monedaData.GenerarData();
+
             context.SaveChanges();
         }
 

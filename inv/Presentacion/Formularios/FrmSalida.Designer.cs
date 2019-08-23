@@ -233,7 +233,7 @@
             this.gbDatosEntrada.Name = "gbDatosEntrada";
             this.gbDatosEntrada.Size = new System.Drawing.Size(941, 193);
             this.gbDatosEntrada.TabIndex = 4;
-            this.gbDatosEntrada.Text = "Datos de entrada";
+            this.gbDatosEntrada.Text = "Datos de salida";
             // 
             // layoutControl2
             // 
@@ -410,7 +410,7 @@
             this.ClientSize = new System.Drawing.Size(965, 769);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FrmSalida";
-            this.Text = "Entrada";
+            this.Text = "Salida";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmEntrada_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
